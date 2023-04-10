@@ -9,7 +9,7 @@ from pynput.mouse import Listener
 
 
 # Create or connect to DB
-connect_db = sqlite3.connect('test/ui_test_results.db')
+connect_db = sqlite3.connect('results/ui_test_results.db')
 
 # Create Cursor object
 cursor_object = connect_db.cursor()
@@ -341,7 +341,7 @@ class UI(QMainWindow):
     # Add all information in database list to SQLite DB
     def add_to_db(self):
         # Connect to DB
-        connect_db = sqlite3.connect('test/ui_test_results.db')
+        connect_db = sqlite3.connect('results/ui_test_results.db')
         # Create Cursor object
         cursor_object = connect_db.cursor()
         # Cursor insert to table
